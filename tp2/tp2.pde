@@ -54,7 +54,8 @@ int trX= 0;
 int textm1 = 0;
 int textm2 = 0;
 int textm3 = 0;
-
+int textm4 = 480;
+int trans5 = 0;
 
 float img1 = 480;
 float img2 = 0;
@@ -185,7 +186,7 @@ void draw() {
     image(cc2, 320, img1);
       fill(255);
       textFont(consola, 30);
-      text("En el año 1999 cae una nave alienigena a la tierra,llamada la Macross. Para 2006 ya hay fundada una gran ciduad alrededor de la Macross.", 15, 10, 630, textm1);
+      text("En el año 1999 cae una nave alienigena a la tierra,llamada la Macross. Para 2006 ya hay fundada una gran ciudad alrededor de la Macross.", 15, 10, 630, textm1);
       
 
 //MACROSS----------------------------------------------------------------------------------------
@@ -244,7 +245,7 @@ if(seg >= 21000 && seg <= 31000){
      if(tp31>=640){
    fill(255, textm3);
    textFont(consola, 30);
-   text("Pero un dia llegan al sistema solar los Zentraedi, unos alienigenas que vinieron a reclamar la Macross, desantado asi la guerra en la tierra.",15, 10, 630, 480);
+   text("Pero un dia llegan al sistema solar los Zentraedi, unos alienigenas que vinieron a reclamar la Macross, desatándo asi la guerra en la tierra.",15, 10, 630, 480);
    textm3 = textm3 + 3;
      }
 //RICK HUNTER-----------------------------------------------------------------------------------
@@ -273,7 +274,8 @@ if(seg >= 21000 && seg <= 31000){
  textFont(consola, 40);
  text("RICK HUNTER", 210, 325);
   textFont(consola, 20);
- text("Un talentoso piloto de acrobacias aéreas. Tras el ataque Zentraedi, se une a la RDF y rápidamente demuestra habilidades excepcionales como piloto de VF-1 ", 260, 360,380,120);
+ text("Un talentoso piloto de acrobacias aéreas. Tras el ataque Zentraedi, se une a la RDF y rápidamente demuestra habilidades excepcionales como piloto de VF-1 ", 260, textm4,380,120);
+ textm4 = max(textm4 -2, 360);
  }
  
  }else if(seg >= 47000 && seg <= 67000){
@@ -308,17 +310,20 @@ if(seg >= 47000){
    rlh = min(rlh +10, 400);
    rlm = max(rlm -10, -400);
  }
- if (rlh >= 400){
-   fill(255, trans3*2.55);
+ if (rlh >= 400 && seg<= 67000){
+   fill(255, trans5);
    text("Primera oficial de la Macross, \n ayudando al capitan Henry Global \n   a manejar la Macross, y futura \n    novia de Rick Hunter, aunque \n    se lleven como 15 años.", 125, 120);
    text("  Una civil cantante \n famosa, que con sus canciones \n anima a las batallas, y gusta \nde Rick Hunter, pero Rick \nprefirio la experiencia en vez \nde la juventud.",155, 350);
    text("Lisa Hayes",125, 90 );
    text("Lynn Minmei",275, 320);
- }
-} 
-if (seg >= 67000){
+   trans5 = min(trans5 + 5, 255);
+ }else{trans5 = max(trans5 -5, 0);}
+ if (seg >= 67000){
   trans3 = max(trans3 - 5, 0);
+
 }
+} 
+
 //-------------------------MAX--------------------------------------------------
 image(ben, benX, bmy);
 image(max, maxX, maxY);
@@ -365,7 +370,7 @@ fill(255, 255, 100, 100);
 rect(0,0,rrX,100,20);
 fill(255);
 textFont(consola, 20);
-text("Un piloto as legendario antes del inicio de la guerra. Es el mentor de Rick y un piloto consumado del VF-1S. Capitan de la Skull Squadron. Pero lamentablemente en un tiroteo contra un Zentraedi fallece.", 10, 10,trX, 90);
+text("Roy Fokker: Un piloto as legendario antes del inicio de la guerra. Es el mentor de Rick y un piloto consumado del VF-1S. Capitan de la Skull Squadron. Pero lamentablemente en un tiroteo contra un Zentraedi fallece.", 10, 10,trX, 90);
 if(seg >= 84000 && seg<= 100000){
  calaY = max(calaY-2, 40);
  if(calaY <= 40){
@@ -466,6 +471,8 @@ click = 0;
  textm1 = 0;
  textm2 = 0;
  textm3 = 0;
+ textm4 = 480;
+ trans5 = 0;
  img1 = 480;
  img2 = 0;
 reinicio = false;
