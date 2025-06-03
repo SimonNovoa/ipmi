@@ -13,9 +13,9 @@ void botonesf(){
   fill(120-lb3,36-lb3,49-lb3);quad(745,36, 772,36, 785,59, 758,59);
   fill(216-lb3,50-lb3,60-lb3);quad(784.5,14, 771.5,37, 784.5,59, 797,37);
   
-  if(dist(mouseX,mouseY,771,137)<46/2){lb=75;}else{lb=0;}
-  if(dist(mouseX,mouseY,771,87)<46/2){lb2=50;}else{lb2=0;}
-  if(dist(mouseX,mouseY,771,37)<46/2){lb3=50;}else{lb3=0;}
+  if(dist(mouseX,mouseY,771,137)<46/2){lb=75;cursor(HAND);}
+  else if(dist(mouseX,mouseY,771,87)<46/2){lb2=50;cursor(HAND);}
+  else if(dist(mouseX,mouseY,771,37)<46/2){lb3=50;cursor(HAND);}else{cursor(ARROW);lb3=0;lb2=0;lb=0;}
   
   fill(r3+188,g3+18,b3+45);
   rect(425,24,10,10);
