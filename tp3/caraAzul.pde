@@ -1,6 +1,6 @@
 void caraAzul(){ 
   pushMatrix();
-  translate(600,105);
+  translate(597,cubo1);
   stroke(2);fill(0);point(0,0);noStroke();
   rotate(ra);
   

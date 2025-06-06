@@ -1,6 +1,6 @@
 void caraRoja(){
   pushMatrix();
-  translate(600,285);
+  translate(597,cubo2);
   stroke(2);fill(0);point(0,0);noStroke();
   rotate(rr);
   
