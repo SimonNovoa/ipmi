@@ -8,8 +8,8 @@ float ra=0, rr=-3.14;
 
 int click=0, click2=0;
 int cubo1=106, cubo2=285;
-int espacio=0;
 
+boolean espacio = false;
 void setup(){
   size(800,400);
   victor = loadImage("victor.jpg");
@@ -25,7 +25,7 @@ void draw(){
  caraAzul();
  botonesf();
  
- text(espacio,20,20);
+ //text(espacio,20,20);
  //text(click2,20,40);
 
  // fill(255,176,254, 156);
@@ -39,21 +39,17 @@ void keyPressed(){
     rr=-3.14;
     click=0;
     click2=0;
-    espacio=0;
     cubo1=106;
     cubo2=285;
   }
   if(key == ' '){
-    espacio++;
-    if(espacio==1){
-      cubo1=285;
-      cubo2=106; 
-    }else if(espacio==2){cubo1=285;
-    cubo1=106;
-    cubo2=285;
-  espacio=0;}
+    espacio = !espacio;
+  if(espacio){
+          cubo1=285;
+      cubo2=106;
+    }else{cubo1=106;
+      cubo2=285;} 
  }
-
 
 }
 void mouseClicked(){
