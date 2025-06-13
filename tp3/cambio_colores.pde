@@ -6,8 +6,8 @@ void cambio(){
  }
  void cambio2(){
 
-  if(click2==1 ){rr=-2.09;}
-  if(click2==2){rr=-4.18;}
+  if(click2==1 ){rr=-1.05;}
+  if(click2==2){rr=-5.24;}
   if(click2==3){click2=0; rr=-3.14;}
  }
  

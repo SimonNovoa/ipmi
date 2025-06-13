@@ -6,9 +6,9 @@ void caraAzul(){
   
 
   for(int py = 0; py < 4; py = py + 1){
-    color azul= color(88-l1,77-l1,207-l1);
-    color verde= color(48-l1,92-l1,33-l1);
-    if(mouseX>600){azul =color(48-l1,92-l1,33-l1); verde =color(88-l1,77-l1,207-l1);}
+    color azul= color(88,77,207);
+    color verde= color(48,92,33);
+    if(mouseX>600){azul =color(48,92,33); verde =color(88,77,207);}
        int des = py * -13; 
        for(int px = 0; px < 4; px = px + 1){ 
          if((px+py)%2==0){fill(azul);}else{fill(verde);}
@@ -23,9 +23,9 @@ void caraAzul(){
   pushMatrix();
   rotate(-2.09);
    for(int py = 0; py < 4; py = py + 1){
-    color azul= color(48-l1,58-l1,50-l1);
-    color verde= color(55-l1,47-l1,158-l1);
-    if(mouseX>600){azul =color(55-l1,47-l1,158-l1); verde =color(48-l1,58-l1,50-l1);}
+    color azul= color(48,58,50);
+    color verde= color(55,47,158);
+    if(mouseX>600){azul =color(55,47,158); verde =color(48,58,50);}
        int des = py * -13; 
        for(int px = 0; px < 4; px = px + 1){ 
          if((px+py)%2==0){fill(azul);}else{fill(verde);}
@@ -40,9 +40,9 @@ void caraAzul(){
    pushMatrix();
   rotate(2.10);
    for(int py = 0; py < 4; py = py + 1){
-    color azul= color(113-l1,130-l1,234-l1);
-    color verde= color(70-l1,145-l1,44-l1);
-    if(mouseX>600){azul =color(70-l1,145-l1,44-l1); verde =color(113-l1,130-l1,234-l1);}
+    color azul= color(113,130,234);
+    color verde= color(70,145,44);
+    if(mouseX>600){azul =color(70,145,44); verde =color(113,130,234);}
        int des = py * -13; 
        for(int px = 0; px < 4; px = px + 1){ 
          if((px+py)%2==0){fill(azul);}else{fill(verde);}

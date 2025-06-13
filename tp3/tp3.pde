@@ -1,8 +1,8 @@
 PImage victor;
 
 PFont text1;
-//l=luz
-int l1=0, l2=0;
+
+
 //ra= rotarAzul, rr= rotarRojo
 float ra=0, rr=-3.14;
 
