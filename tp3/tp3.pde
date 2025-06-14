@@ -1,3 +1,5 @@
+//MI VIDEO DE YOUTUBEE:
+//https://www.youtube.com/watch?v=RyOWG4sJUs4&t=1s
 PImage victor;
 
 PFont text1;
@@ -39,8 +41,8 @@ void keyPressed(){
     rr=-3.14;
     click=0;
     click2=0;
-    cubo1=106;
-    cubo2=285;
+    cubo1=106;//posicionY cubo azul
+    cubo2=285;//posicionY cubo rojo
   }
   if(key == ' '){
     espacio = !espacio;
@@ -52,6 +54,6 @@ void keyPressed(){
  }
 
 }
-void mouseClicked(){
+void mousePressed(){
   botonesc();
 }
